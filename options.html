@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eklenti Ayarları</title>
+	<style>
+		.outer-wrap {width:600px;padding:10px;margin:0 auto;}
+		#wrap {margin-bottom:10px;}
+		.single-wrap {display:block;padding:10px 20px;}
+		.single-wrap:nth-child(odd) {background-color:#ddd;}
+		.mnem-input {width:65px;}
+		.ip-index-input {width:100px;margin-left:25px;}
+		.color-input {width:60px;margin-left:8px;}
+		.single-wrap button {margin-left:10px;}
+		.r-message {margin-left:10px;font-size:small;}
+		.title {margin-bottom:-10px;}
+		.description {font-size:small;}
+	</style>
+</head>
+<body>
+	<div class="outer-wrap">
+		<h2>Eklenti Ayarları</h2>
+		<div class="mnemonics">
+			<h3 class="title">Merhaba!</h3>
+			<p class="description">Aşağıda, IP adresinin son üç hanesi yerine ShowIP simgesinde görünmesini istediğiniz anımsatıcıyı veya kısaltmayı belirtebilirsiniz.</p>
+			<div id="wrap"></div>
+			<button id="add_mnem">&nbsp;+&nbsp;</button>
+			<div id="default_color_wrap">
+				<label for="default_color">Standart Renk</label>
+				<input class="color-input" type="color" name="default_color" id="default_color" /><span class="r-message" id="default_color_out"></span>
+			</div>
+		</div>
+		<div class="hover-box">
+			<h3 class="title">Çerçeve Rengi</h3>
+			<p class="description">Aşağıdaki ayarların etkili olabilmesi için sayfanın yenilenmesi gerekir.</p>
+			<p>
+				<input type="checkbox" name="hb" id="hb" value="show_hb" />
+				Burayı işaretlediğinizde, sekme yüklenir yüklenmez görüntüleme kolaylığı için görüntülediğiniz sayfadaki IP adresinin tamamı sol/sağ üst köşede görüntülenecektir. Bu ayardan bağımsız olarak, tam ip gösteriminin Chrome'daki uzantı düğmesine tıklanarak herhangi bir zamanda değiştirilebileceğini unutmayın.
+			</p>
+			<p>
+				<input type="checkbox" name="hb_still" id="hb_still" value="cement_hb" />
+				Burayı işaretlemek, fareniz üzerinde hareket ettiğinde IP ekranının hareket etmesini önleyecektir.
+			</p>
+		</div>
+		<div>
+			<h3 class="title">Yerel Depolama Yönetimi</h3>
+			<p class="description">Tüm URL, IP kombinasyonları için yerel depolamayı silin. Bu zararsızdır, ancak uzantı o anda açık olan sekmelerin 'izini kaybedecektir'. Yalnızca yerel depolama alanının çok büyüdüğünü düşünüyorsanız (kaç farklı siteyi ziyaret ettiğinize bağlı olarak) gerçekten yararlıdır.</p>
+			<button id="del_ls">Sil</button>
+		</div>
+	</div>
+	<script src="options.js"></script>
+</body>
+</html>

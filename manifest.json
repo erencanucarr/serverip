@@ -1,0 +1,43 @@
+{
+  "name": "Server IP",
+  "version": "3.0.0",
+  "description": "View Server IP address or alias, works with CDNs and Cloudflare",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["hover-box.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "ServerIP - Click to toggle IP display",
+    "default_icon": {
+      "19": "icon19.png",
+      "38": "icon38.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["hover-box.js"],
+    "run_at": "document_end"
+  }],
+  "manifest_version": 3
+}
