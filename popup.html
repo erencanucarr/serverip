@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ServerIP</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="container">
+    <header class="hdr"><i class="fa-solid fa-server"></i><span class="title">ServerIP</span></header>
+    <main>
+      <div id="state-loading" class="state"><i class="fa-solid fa-spinner fa-spin"></i><span class="txt">Loading…</span></div>
+      <div id="state-noip" class="state"><i class="fa-solid fa-exclamation-triangle"></i><p class="txt">IP not yet retrieved.<br>Reload tab or press Retry.</p></div>
+      <div id="state-display" class="state">
+        <span id="ip-badge" class="badge"></span>
+        <small id="ip-mnemonic" class="mnemonic"></small>
+      </div>
+      <div id="state-error" class="state"><i class="fa-solid fa-circle-exclamation"></i><p class="txt">Could not fetch IP.<br>Check advanced settings.</p></div>
+    </main>
+    <footer>
+      <button id="btn-retry" class="btn primary"><i class="fa-solid fa-rotate"></i> Retry</button>
+      <a href="options.html" id="lnk-settings" class="btn link"><i class="fa-solid fa-cog"></i> Settings</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
