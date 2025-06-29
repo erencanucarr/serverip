@@ -35,7 +35,7 @@ This is a Chrome extension that allows you to quickly view the server IP address
 
 ## Screenshot
 
-![image](https://github.com/user-attachments/assets/e92f67a0-2123-46cf-932b-30b2dc1f4039)
+![chrome_WV0Pn716PP](https://github.com/user-attachments/assets/28ce042c-de91-468f-b075-9ec4c53c6660)
 
 ## Contribution & License
 
